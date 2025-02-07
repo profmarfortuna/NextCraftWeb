@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/Geral.css" />
+  <title>Keke Agendamento</title>
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault();
+
+      const diasSemana = document.querySelectorAll('input[name="dia_semana"]:checked');
+      const primeiraData = document.querySelector('input[name="Pdata"]').value;
+      const segundaData = document.querySelector('input[name="Sdata"]').value;
+      const erros = document.getElementById('erros');
+      erros.innerHTML = '';
+
+      let mensagensErro = [];
+
+
+      if (diasSemana.length === 0) {
+        mensagensErro.push('Por favor, selecione pelo menos um dia da semana.');
+      }
+
+
+      if (!primeiraData) {
+        mensagensErro.push('Por favor, insira a primeira opção de data.');
+      }
+
+
+      if (!segundaData) {
+        mensagensErro.push('Por favor, insira a segunda opção de data.');
+      }
+
+      if (mensagensErro.length > 0) {
+
+        erros.innerHTML = '';
+
+        // Cria o título
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Erros no Agendamento';
+        h1.style.color = 'red';
+        h1.style.textAlign = 'center';
+        erros.appendChild(h1);
+        return false;
+      }
+
+
+
+
+      alert('Formulário enviado com sucesso!');
+      event.target.submit();
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="cabecalho">
+      <h1 id="Keke">KEKE DÚ CORTE</h1>
+      <nav>
+        <ul>
+          <li><a href="Index.html" class="cta-button">VOLTAR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br><br><br><br><br>
+
+  <!-- Seção Principal -->
+  <main>
+    <form onsubmit="validarFormulario(event)">
+      <fieldset id="agendamento">
+        <center>
+          <legend>
+            <h1>Data do agendamento - Não atendemos nos domingos</h1>
+          </legend>
+        </center>
+        <center>
+          <legend>
+            <h1>Horário de funcionamento: das 8:00 às 18:00</h1>
+          </legend>
+        </center>
+        <div id="erros" aria-live="polite"></div>
+        <br>
+        <h2>
+          <center>
+            Indique os dias da semana de sua preferência: <br>
+            <input type="checkbox" name="dia_semana" value="segunda"> Segunda
+            <input type="checkbox" name="dia_semana" value="terca"> Terça
+            <input type="checkbox" name="dia_semana" value="quarta"> Quarta
+            <input type="checkbox" name="dia_semana" value="quinta"> Quinta
+            <input type="checkbox" name="dia_semana" value="sexta"> Sexta
+            <input type="checkbox" name="dia_semana" value="sabado"> Sábado
+          </center>
+        </h2>
+        <br>
+        <h2>
+          <center>
+            Primeira opção de data: <br>
+            <input type="date" name="Pdata">
+          </center>
+        </h2>
+        <br>
+        <h3>
+          <center>
+            Segunda opção de data: <br>
+            <input type="date" name="Sdata">
+          </center>
+        </h3>
+        <br>
+        <h4>
+          <center>
+            <button type="submit" class="cta-button">Enviar</button>
+          </center>
+        </h4>
+      </fieldset>
+    </form>
+  </main>
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p id="ultimo">
+        &copy; Barbearia do Keke. Melhor de Cariacica.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
