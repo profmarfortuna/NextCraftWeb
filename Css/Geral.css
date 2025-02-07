@@ -1,0 +1,363 @@
+/*Configuração da Barra Rolagem*/
+html::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f8efed;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #21272a;
+    border-radius: 5rem;
+}
+
+/* Cabeçalho fixo */
+header {
+    background: #21272a;
+    color: #f8efed;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .cabecalho {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.75rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.hero, .services, .gallery, .contact {
+    margin-top: 50px;
+}
+
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    background-color: #e2e2e2;
+    height: 900px;
+}
+
+/* Cabeçalho */
+header {
+    background: #21272a;
+    color: #f8efed;
+    padding: 1rem 0;
+}
+
+header .cabecalho {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.75rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Seção Principal */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.cta-button {
+    padding: 15px 30px;
+    background-color: #000000; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.cta-button:hover {
+    background-color: #ff1414; 
+    color: white; 
+}
+
+/* Seções de conteúdo */
+.services, .gallery, .contact {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2, .gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service {
+    margin-bottom: 2rem;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Formulário de Contato */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background: #000000;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Rodapé */
+footer {
+    background: #21272a;
+    color: #747873;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h2 {
+    color: #000000;
+}
+
+p {
+    color: #000000;
+}
+
+#ultimo {
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #e2e2e2;
+}
+
+h3 {
+    color: #000;
+}
+
+.gallery2 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery2 img {
+    width: 30%;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px #21272a;
+    width: 250px;
+    height: auto;
+}
+
+.cabecalho {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main.o {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3.ola {
+    color: rgb(255, 255, 255);
+}
+
+h1.clt {
+    color: rgb(255, 255, 255);
+    background-color: #999494;
+}
+
+/*Estilização para o celular*/
+@media screen and (max-width: 768px) {
+    header nav ul {
+      text-align: center;
+      padding: 0;
+    }
+  
+    header nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.5em;
+    }
+  
+    .hero-content h3 {
+      font-size: 1em;
+      margin-top: 10px;
+    }
+  
+    .cta-button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+  
+    .sobre table {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+    }
+  
+    footer p {
+      font-size: 0.9em;
+    }
+  }
+
+
+
+
